@@ -33,8 +33,13 @@
             this.btnIn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgVec = new System.Windows.Forms.DataGridView();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVec)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExport
@@ -78,20 +83,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(925, 64);
+            this.label1.Location = new System.Drawing.Point(667, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "İçeride Bulunan Toplam Araç Sayısı: ";
             // 
-            // dataGridView1
+            // dgVec
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(118, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 597);
-            this.dataGridView1.TabIndex = 5;
+            this.dgVec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVec.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.plate,
+            this.driver,
+            this.dateI,
+            this.userS,
+            this.weight});
+            this.dgVec.Location = new System.Drawing.Point(118, 64);
+            this.dgVec.Name = "dgVec";
+            this.dgVec.RowTemplate.Height = 24;
+            this.dgVec.Size = new System.Drawing.Size(543, 590);
+            this.dgVec.TabIndex = 5;
+            // 
+            // plate
+            // 
+            this.plate.DataPropertyName = "plate";
+            this.plate.HeaderText = "Plaka";
+            this.plate.Name = "plate";
+            // 
+            // driver
+            // 
+            this.driver.DataPropertyName = "driver";
+            this.driver.HeaderText = "Şöför";
+            this.driver.Name = "driver";
+            // 
+            // dateI
+            // 
+            this.dateI.DataPropertyName = "dateI";
+            this.dateI.HeaderText = "Giriş Tarihi";
+            this.dateI.Name = "dateI";
+            // 
+            // userS
+            // 
+            this.userS.DataPropertyName = "userS";
+            this.userS.HeaderText = "Kayıt Eden";
+            this.userS.Name = "userS";
+            // 
+            // weight
+            // 
+            this.weight.DataPropertyName = "weight";
+            this.weight.HeaderText = "Ağırlık";
+            this.weight.Name = "weight";
             // 
             // FmHome
             // 
@@ -99,7 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgVec);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnOut);
@@ -108,7 +149,7 @@
             this.Name = "FmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Ana Sayfa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgVec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,6 +162,11 @@
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgVec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn driver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
     }
 }

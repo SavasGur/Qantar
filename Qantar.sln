@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qantar", "Qantar\Qantar.csproj", "{3DC624E3-DBCB-4F1E-B0AC-5BA4646193CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DC624E3-DBCB-4F1E-B0AC-5BA4646193CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC624E3-DBCB-4F1E-B0AC-5BA4646193CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC624E3-DBCB-4F1E-B0AC-5BA4646193CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC624E3-DBCB-4F1E-B0AC-5BA4646193CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BE4243F-64C4-46C7-825A-41BEA639B57E}
+	EndGlobalSection
+EndGlobal

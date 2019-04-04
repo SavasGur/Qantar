@@ -103,6 +103,16 @@ namespace Qantar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_truck_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-truck-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_truck_26__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-truck-26 (1)", resourceCulture);

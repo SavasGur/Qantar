@@ -120,31 +120,7 @@
     <None Include="Resources\icons8-shutdown-26.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-shutdown-52.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-undo-26.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-ratings-26.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-26 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-26 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-52.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-75.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-55.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-truck-551.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-truck-55 %282%29.png" />
@@ -156,13 +132,7 @@
     <None Include="Resources\icons8-ratings-55.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-truck-26.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-home-55.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-microsoft-excel-55.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-microsoft-excel-55 %281%29.png" />

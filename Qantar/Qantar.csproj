@@ -70,6 +70,12 @@
     <Compile Include="FmOut.Designer.cs">
       <DependentUpon>FmOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmReport.Designer.cs">
+      <DependentUpon>FmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FmAdd.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmOut.resx">
       <DependentUpon>FmOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmReport.resx">
+      <DependentUpon>FmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +160,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-home-55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-55 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

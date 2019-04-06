@@ -73,6 +73,26 @@ namespace Qantar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_excel_55 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-excel-55", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_excel_55__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-excel-55 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_ratings_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-ratings-26", resourceCulture);

@@ -17,6 +17,7 @@ namespace Qantar
         public FmHome()
         {
             InitializeComponent();
+
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
@@ -27,6 +28,8 @@ namespace Qantar
                 dgVecIN.DataSource = dtbl;
 
             }
+
+            timer1.Start();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -48,6 +51,20 @@ namespace Qantar
             FmOut objFmOut = new FmOut();
             this.Close();
             objFmOut.Show();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FmReport objFmReport = new FmReport();
+            this.Close();
+            objFmReport.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime t = DateTime.Now;
+            this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
+            
         }
     }
 }

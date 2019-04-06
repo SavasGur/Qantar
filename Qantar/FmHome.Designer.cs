@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
             this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,10 +38,12 @@
             this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.labeldt = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             this.dgVecIN.Location = new System.Drawing.Point(118, 161);
             this.dgVecIN.Name = "dgVecIN";
             this.dgVecIN.RowTemplate.Height = 24;
-            this.dgVecIN.Size = new System.Drawing.Size(760, 500);
+            this.dgVecIN.Size = new System.Drawing.Size(775, 500);
             this.dgVecIN.TabIndex = 5;
             // 
             // plate
@@ -75,9 +78,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle1.Format = "G";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "g";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle7;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.Width = 125;
@@ -109,39 +112,43 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(906, 161);
+            this.label1.Location = new System.Drawing.Point(899, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "İçeride Bulunan Toplam Araç Sayısı: ";
             // 
-            // btnExport
+            // btnReport
             // 
-            this.btnExport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
-            this.btnExport.Location = new System.Drawing.Point(12, 323);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(100, 75);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnReport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
+            this.btnReport.Location = new System.Drawing.Point(12, 323);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(100, 75);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnOut
             // 
+            this.btnOut.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnOut.Image = global::Qantar.Properties.Resources.icons8_truck_55__2_;
             this.btnOut.Location = new System.Drawing.Point(12, 242);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(100, 75);
             this.btnOut.TabIndex = 2;
-            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.UseVisualStyleBackColor = false;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // btnIn
             // 
+            this.btnIn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnIn.Image = global::Qantar.Properties.Resources.icons8_truck_55__1_;
             this.btnIn.Location = new System.Drawing.Point(12, 161);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(100, 75);
             this.btnIn.TabIndex = 1;
-            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.UseVisualStyleBackColor = false;
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnLogout
@@ -155,16 +162,31 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // labeldt
+            // 
+            this.labeldt.AutoSize = true;
+            this.labeldt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldt.Location = new System.Drawing.Point(12, 9);
+            this.labeldt.Name = "labeldt";
+            this.labeldt.Size = new System.Drawing.Size(184, 20);
+            this.labeldt.TabIndex = 7;
+            this.labeldt.Text = "MM/dd/yyyy HH:mm:ss";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.labeldt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgVecIN);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnOut);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnLogout);
@@ -182,7 +204,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Button btnOut;
-        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgVecIN;
         private System.Windows.Forms.Label label2;
@@ -191,5 +213,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
         private System.Windows.Forms.DataGridViewTextBoxColumn userS;
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.Label labeldt;
+        private System.Windows.Forms.Timer timer1;
     }
 }

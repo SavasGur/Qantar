@@ -79,5 +79,12 @@ namespace Qantar
                 objFmHome.Show();
             }
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FmReport objFmReport = new FmReport();
+            this.Close();
+            objFmReport.Show();
+        }
     }
 }

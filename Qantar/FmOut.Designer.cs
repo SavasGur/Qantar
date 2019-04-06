@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPlate = new System.Windows.Forms.TextBox();
             this.txtDriver = new System.Windows.Forms.TextBox();
@@ -45,31 +50,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnExport
+            // btnReport
             // 
-            this.btnExport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
-            this.btnExport.Location = new System.Drawing.Point(12, 323);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(100, 75);
-            this.btnExport.TabIndex = 6;
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnReport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
+            this.btnReport.Location = new System.Drawing.Point(12, 323);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(100, 75);
+            this.btnReport.TabIndex = 6;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnIn
             // 
+            this.btnIn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnIn.Image = global::Qantar.Properties.Resources.icons8_truck_55__1_;
             this.btnIn.Location = new System.Drawing.Point(12, 161);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(100, 75);
             this.btnIn.TabIndex = 4;
-            this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.UseVisualStyleBackColor = false;
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // dgVecIN
@@ -84,8 +87,42 @@
             this.dgVecIN.Location = new System.Drawing.Point(118, 161);
             this.dgVecIN.Name = "dgVecIN";
             this.dgVecIN.RowTemplate.Height = 24;
-            this.dgVecIN.Size = new System.Drawing.Size(760, 500);
+            this.dgVecIN.Size = new System.Drawing.Size(775, 500);
             this.dgVecIN.TabIndex = 7;
+            // 
+            // plate
+            // 
+            this.plate.DataPropertyName = "plate";
+            this.plate.HeaderText = "Plaka";
+            this.plate.Name = "plate";
+            // 
+            // driver
+            // 
+            this.driver.DataPropertyName = "driver";
+            this.driver.HeaderText = "Şöför";
+            this.driver.Name = "driver";
+            // 
+            // dateI
+            // 
+            this.dateI.DataPropertyName = "dateI";
+            dataGridViewCellStyle1.Format = "g";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dateI.HeaderText = "Giriş Tarihi";
+            this.dateI.Name = "dateI";
+            this.dateI.Width = 125;
+            // 
+            // userS
+            // 
+            this.userS.DataPropertyName = "userS";
+            this.userS.HeaderText = "Kayıt Eden";
+            this.userS.Name = "userS";
+            // 
+            // weight
+            // 
+            this.weight.DataPropertyName = "weightI";
+            this.weight.HeaderText = "Ağırlık";
+            this.weight.Name = "weight";
             // 
             // label2
             // 
@@ -210,40 +247,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // plate
-            // 
-            this.plate.DataPropertyName = "plate";
-            this.plate.HeaderText = "Plaka";
-            this.plate.Name = "plate";
-            // 
-            // driver
-            // 
-            this.driver.DataPropertyName = "driver";
-            this.driver.HeaderText = "Şöför";
-            this.driver.Name = "driver";
-            // 
-            // dateI
-            // 
-            this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle1.Format = "G";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dateI.HeaderText = "Giriş Tarihi";
-            this.dateI.Name = "dateI";
-            this.dateI.Width = 125;
-            // 
-            // userS
-            // 
-            this.userS.DataPropertyName = "userS";
-            this.userS.HeaderText = "Kayıt Eden";
-            this.userS.Name = "userS";
-            // 
-            // weight
-            // 
-            this.weight.DataPropertyName = "weightI";
-            this.weight.HeaderText = "Ağırlık";
-            this.weight.Name = "weight";
-            // 
             // FmOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,7 +262,7 @@
             this.Controls.Add(this.txtPlate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgVecIN);
-            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -277,7 +280,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.DataGridView dgVecIN;
         private System.Windows.Forms.Label label2;

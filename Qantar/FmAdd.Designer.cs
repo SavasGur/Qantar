@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExport = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.txtPlate = new System.Windows.Forms.TextBox();
             this.txtDriver = new System.Windows.Forms.TextBox();
@@ -40,23 +40,26 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnExport
+            // btnReport
             // 
-            this.btnExport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
-            this.btnExport.Location = new System.Drawing.Point(12, 323);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(100, 75);
-            this.btnExport.TabIndex = 9;
-            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnReport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
+            this.btnReport.Location = new System.Drawing.Point(12, 323);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(100, 75);
+            this.btnReport.TabIndex = 9;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnOut
             // 
+            this.btnOut.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnOut.Image = global::Qantar.Properties.Resources.icons8_truck_55__2_;
             this.btnOut.Location = new System.Drawing.Point(12, 242);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(100, 75);
             this.btnOut.TabIndex = 8;
-            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.UseVisualStyleBackColor = false;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // txtPlate
@@ -150,7 +153,7 @@
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.txtDriver);
             this.Controls.Add(this.txtPlate);
-            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnOut);
             this.Name = "FmAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -162,7 +165,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.TextBox txtPlate;
         private System.Windows.Forms.TextBox txtDriver;

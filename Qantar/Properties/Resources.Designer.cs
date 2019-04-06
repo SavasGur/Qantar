@@ -73,29 +73,9 @@ namespace Qantar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_microsoft_excel_55 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-microsoft-excel-55", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_microsoft_excel_55__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-microsoft-excel-55 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ratings_26 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-ratings-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,66 +103,6 @@ namespace Qantar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_shutdown_52 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-shutdown-52", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_26 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-26", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_26__1_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-26 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_26__2_ {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-26 (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_52 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-52", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_55 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-55", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_truck_55__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-truck-55 (1)", resourceCulture);
@@ -196,26 +116,6 @@ namespace Qantar.Properties {
         internal static System.Drawing.Bitmap icons8_truck_55__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-truck-55 (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_551 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-551", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_truck_75 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-truck-75", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

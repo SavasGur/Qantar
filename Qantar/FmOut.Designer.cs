@@ -84,7 +84,7 @@
             this.dgVecIN.Location = new System.Drawing.Point(118, 161);
             this.dgVecIN.Name = "dgVecIN";
             this.dgVecIN.RowTemplate.Height = 24;
-            this.dgVecIN.Size = new System.Drawing.Size(750, 500);
+            this.dgVecIN.Size = new System.Drawing.Size(760, 500);
             this.dgVecIN.TabIndex = 7;
             // 
             // plate
@@ -172,6 +172,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(978, 157);
             this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(79, 25);
             this.label1.TabIndex = 14;
             this.label1.Text = "Plaka: ";
@@ -182,6 +183,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(980, 201);
             this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "Şoför: ";
@@ -192,6 +194,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(916, 246);
             this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label4.Size = new System.Drawing.Size(141, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Giriş Ağırlığı: ";
@@ -202,6 +205,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(912, 294);
             this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(145, 25);
             this.label5.TabIndex = 17;
             this.label5.Text = "Çıkış Ağırlığı: ";
@@ -212,6 +216,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(914, 345);
             this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(143, 25);
             this.label6.TabIndex = 18;
             this.label6.Text = "Ürün Ağırlığı: ";
@@ -245,11 +250,6 @@
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.txtWo);
             this.Controls.Add(this.txtWi);
@@ -259,6 +259,11 @@
             this.Controls.Add(this.dgVecIN);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnIn);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Name = "FmOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Çıkış";

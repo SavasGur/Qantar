@@ -16,6 +16,8 @@ namespace Qantar
         public FmLogin()
         {
             InitializeComponent();
+
+            txtPassword.PasswordChar = '*';
         }
 
    
@@ -27,21 +29,36 @@ namespace Qantar
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
-            string query = "Select * from dbo.LoginCred Where username = '"+txtUsername.Text.Trim()+"' and password ='"+txtPassword.Text.Trim()+"'";
-            SqlDataAdapter sda = new SqlDataAdapter(query,sqlcon);
-            DataTable dtbl = new DataTable();
-            sda.Fill(dtbl);
-            if (dtbl.Rows.Count == 1)
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) && string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                FmHome objFmHome = new FmHome();
-                this.Hide();
-                objFmHome.Show();
-
+                MessageBox.Show("Lütfen Kullanıcı Adı ve Şifre Girin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Lütfen Kullanıcı Adı Girin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Lütfen Şifre Girin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!");
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
+                string query = "Select * from dbo.LoginCred Where username = '" + txtUsername.Text.Trim() + "' and password ='" + txtPassword.Text.Trim() + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+                DataTable dtbl = new DataTable();
+                sda.Fill(dtbl);
+                if (dtbl.Rows.Count == 1)
+                {
+                    FmHome objFmHome = new FmHome();
+                    this.Hide();
+                    objFmHome.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!");
+                }
             }
 
         }

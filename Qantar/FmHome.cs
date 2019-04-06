@@ -64,7 +64,6 @@ namespace Qantar
         {
             DateTime t = DateTime.Now;
             this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
-            
         }
     }
 }

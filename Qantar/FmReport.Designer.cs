@@ -38,9 +38,9 @@
             this.btnExc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExc.Image = global::Qantar.Properties.Resources.icons8_microsoft_excel_55__1_;
             this.btnExc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExc.Location = new System.Drawing.Point(1000, 12);
+            this.btnExc.Location = new System.Drawing.Point(950, 12);
             this.btnExc.Name = "btnExc";
-            this.btnExc.Size = new System.Drawing.Size(250, 75);
+            this.btnExc.Size = new System.Drawing.Size(300, 75);
             this.btnExc.TabIndex = 22;
             this.btnExc.Text = "Excel Dosyasına Çevir";
             this.btnExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.txtPlate = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.labeldt = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnReport
@@ -139,12 +142,27 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // labeldt
+            // 
+            this.labeldt.AutoSize = true;
+            this.labeldt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldt.Location = new System.Drawing.Point(12, 9);
+            this.labeldt.Name = "labeldt";
+            this.labeldt.Size = new System.Drawing.Size(184, 20);
+            this.labeldt.TabIndex = 19;
+            this.labeldt.Text = "MM/dd/yyyy HH:mm:ss";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.labeldt);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
@@ -175,5 +193,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Label labeldt;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
@@ -50,6 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.labeldt = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,9 +108,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle3.Format = "g";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.Width = 125;
@@ -247,12 +250,27 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // labeldt
+            // 
+            this.labeldt.AutoSize = true;
+            this.labeldt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldt.Location = new System.Drawing.Point(12, 9);
+            this.labeldt.Name = "labeldt";
+            this.labeldt.Size = new System.Drawing.Size(184, 20);
+            this.labeldt.TabIndex = 21;
+            this.labeldt.Text = "MM/dd/yyyy HH:mm:ss";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FmOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.labeldt);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPw);
@@ -301,5 +319,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
         private System.Windows.Forms.DataGridViewTextBoxColumn userS;
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.Label labeldt;
+        private System.Windows.Forms.Timer timer1;
     }
 }

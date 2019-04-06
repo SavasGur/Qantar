@@ -16,9 +16,17 @@ namespace Qantar
         public FmLogin()
         {
             InitializeComponent();
-
+            timer1.Start();
             txtPassword.PasswordChar = '*';
-        }  
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Tab))
+            {
+                txtUsername.Focus();
+            }
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -61,5 +69,10 @@ namespace Qantar
             this.Close();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime t = DateTime.Now;
+            this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
+        }
     }
 }

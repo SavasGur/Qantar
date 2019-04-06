@@ -69,11 +69,11 @@ namespace Qantar
             {
                 SqlConnection sqlcon = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
                 sqlcon.Open();
-                SqlCommand qadd = new SqlCommand("INSERT INTO VehiclesOUT(plate, driver, dateO, userS, weightI, weightO, productW) VALUES('" + txtPlate.Text.Trim() + "', '" + txtDriver.Text.Trim() + "', getdate(), 'user', '" + txtWi.Text.Trim() + "', '" + txtWi.Text.Trim() + "', '" + txtWo.Text.Trim() + "', '" + txtPw.Text.Trim() + "'); ", sqlcon);
-                SqlCommand qdel = new SqlCommand("DELETE FROM VehiclesIN WHERE plate = '" + txtPlate + "'; ", sqlcon);
+                SqlCommand qadd = new SqlCommand("INSERT INTO VehiclesOUT(plate, driver, dateO, userS, weightI, weightO, productW) VALUES('" + txtPlate.Text.Trim() + "', '" + txtDriver.Text.Trim() + "', getdate(), 'user', '" + txtWi.Text.Trim() + "', '" + txtWo.Text.Trim() + "', '" + txtPw.Text.Trim() + "'); ", sqlcon);
+                SqlCommand qdel = new SqlCommand("DELETE FROM VehiclesIN WHERE plate = '" + txtPlate.Text.Trim() + "'; ", sqlcon);
                 qadd.ExecuteNonQuery();
                 qdel.ExecuteNonQuery();
-
+                
                 FmHome objFmHome = new FmHome();
                 this.Close();
                 objFmHome.Show();

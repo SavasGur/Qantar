@@ -32,11 +32,6 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
-            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPlate = new System.Windows.Forms.TextBox();
             this.txtDriver = new System.Windows.Forms.TextBox();
@@ -48,8 +43,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,39 +86,6 @@
             this.dgVecIN.RowTemplate.Height = 24;
             this.dgVecIN.Size = new System.Drawing.Size(760, 500);
             this.dgVecIN.TabIndex = 7;
-            // 
-            // plate
-            // 
-            this.plate.DataPropertyName = "plate";
-            this.plate.HeaderText = "Plaka";
-            this.plate.Name = "plate";
-            // 
-            // driver
-            // 
-            this.driver.DataPropertyName = "driver";
-            this.driver.HeaderText = "Şöför";
-            this.driver.Name = "driver";
-            // 
-            // dateI
-            // 
-            this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dateI.HeaderText = "Giriş Tarihi";
-            this.dateI.Name = "dateI";
-            // 
-            // userS
-            // 
-            this.userS.DataPropertyName = "userS";
-            this.userS.HeaderText = "Kayıt Eden";
-            this.userS.Name = "userS";
-            // 
-            // weight
-            // 
-            this.weight.DataPropertyName = "weight";
-            this.weight.HeaderText = "Ağırlık";
-            this.weight.Name = "weight";
             // 
             // label2
             // 
@@ -221,15 +188,16 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Ürün Ağırlığı: ";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(1150, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 50);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Kaydet";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.Location = new System.Drawing.Point(1150, 405);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 50);
+            this.btnSave.TabIndex = 19;
+            this.btnSave.Text = "Kaydet";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnHome
             // 
@@ -242,6 +210,40 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // plate
+            // 
+            this.plate.DataPropertyName = "plate";
+            this.plate.HeaderText = "Plaka";
+            this.plate.Name = "plate";
+            // 
+            // driver
+            // 
+            this.driver.DataPropertyName = "driver";
+            this.driver.HeaderText = "Şöför";
+            this.driver.Name = "driver";
+            // 
+            // dateI
+            // 
+            this.dateI.DataPropertyName = "dateI";
+            dataGridViewCellStyle1.Format = "G";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dateI.HeaderText = "Giriş Tarihi";
+            this.dateI.Name = "dateI";
+            this.dateI.Width = 125;
+            // 
+            // userS
+            // 
+            this.userS.DataPropertyName = "userS";
+            this.userS.HeaderText = "Kayıt Eden";
+            this.userS.Name = "userS";
+            // 
+            // weight
+            // 
+            this.weight.DataPropertyName = "weightI";
+            this.weight.HeaderText = "Ağırlık";
+            this.weight.Name = "weight";
+            // 
             // FmOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,7 +251,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.btnHome);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.txtWo);
             this.Controls.Add(this.txtWi);
@@ -278,11 +280,6 @@
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.DataGridView dgVecIN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn driver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPlate;
         private System.Windows.Forms.TextBox txtDriver;
@@ -294,7 +291,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn driver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
     }
 }

@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
+            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,40 @@
             this.dgVecIN.RowTemplate.Height = 24;
             this.dgVecIN.Size = new System.Drawing.Size(760, 500);
             this.dgVecIN.TabIndex = 5;
+            // 
+            // plate
+            // 
+            this.plate.DataPropertyName = "plate";
+            this.plate.HeaderText = "Plaka";
+            this.plate.Name = "plate";
+            // 
+            // driver
+            // 
+            this.driver.DataPropertyName = "driver";
+            this.driver.HeaderText = "Şöför";
+            this.driver.Name = "driver";
+            // 
+            // dateI
+            // 
+            this.dateI.DataPropertyName = "dateI";
+            dataGridViewCellStyle1.Format = "G";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dateI.HeaderText = "Giriş Tarihi";
+            this.dateI.Name = "dateI";
+            this.dateI.Width = 125;
+            // 
+            // userS
+            // 
+            this.userS.DataPropertyName = "userS";
+            this.userS.HeaderText = "Kayıt Eden";
+            this.userS.Name = "userS";
+            // 
+            // weight
+            // 
+            this.weight.DataPropertyName = "weightI";
+            this.weight.HeaderText = "Ağırlık";
+            this.weight.Name = "weight";
             // 
             // label2
             // 
@@ -120,40 +154,6 @@
             this.btnLogout.TabIndex = 0;
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // plate
-            // 
-            this.plate.DataPropertyName = "plate";
-            this.plate.HeaderText = "Plaka";
-            this.plate.Name = "plate";
-            // 
-            // driver
-            // 
-            this.driver.DataPropertyName = "driver";
-            this.driver.HeaderText = "Şöför";
-            this.driver.Name = "driver";
-            // 
-            // dateI
-            // 
-            this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle8.Format = "G";
-            dataGridViewCellStyle8.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dateI.HeaderText = "Giriş Tarihi";
-            this.dateI.Name = "dateI";
-            this.dateI.Width = 125;
-            // 
-            // userS
-            // 
-            this.userS.DataPropertyName = "userS";
-            this.userS.HeaderText = "Kayıt Eden";
-            this.userS.Name = "userS";
-            // 
-            // weight
-            // 
-            this.weight.DataPropertyName = "weightI";
-            this.weight.HeaderText = "Ağırlık";
-            this.weight.Name = "weight";
             // 
             // FmHome
             // 

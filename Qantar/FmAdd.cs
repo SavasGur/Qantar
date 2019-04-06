@@ -35,17 +35,30 @@ namespace Qantar
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+            if (string.IsNullOrWhiteSpace(txtPlate.Text))
+            {
+                MessageBox.Show("Lütfen Boş Alan Bırakmayınız.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtDriver.Text))
+            {
+                MessageBox.Show("Lütfen Boş Alan Bırakmayınız.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtWeight.Text))
+            {
+                MessageBox.Show("Lütfen Boş Alan Bırakmayınız.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
+                sqlcon.Open();
+                SqlCommand qadd = new SqlCommand("INSERT INTO VehiclesIN(plate, driver, dateI, userS, weightI) VALUES('" + txtPlate.Text.Trim() + "', '" + txtDriver.Text.Trim() + "', getdate(), 'user', '" + txtWeight.Text.Trim() + "'); ", sqlcon);
 
-            SqlConnection sqlcon = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
-            sqlcon.Open();
-            SqlCommand qadd = new SqlCommand("INSERT INTO VehiclesIN(plate, driver, dateI, userS, weightI) VALUES('" + txtPlate.Text.Trim() + "', '" + txtDriver.Text.Trim() + "', getdate(), 'user', '" + txtWeight.Text.Trim() + "'); ", sqlcon);
+                qadd.ExecuteNonQuery();
 
-            qadd.ExecuteNonQuery();
-
-            FmHome objFmHome = new FmHome();
-            this.Close();
-            objFmHome.Show();
-
+                FmHome objFmHome = new FmHome();
+                this.Close();
+                objFmHome.Show();
+            }
 
         }
     }

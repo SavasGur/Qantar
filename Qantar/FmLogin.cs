@@ -18,14 +18,7 @@ namespace Qantar
             InitializeComponent();
 
             txtPassword.PasswordChar = '*';
-        }
-
-   
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        }  
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

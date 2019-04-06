@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmAdd.Designer.cs">
+      <DependentUpon>FmAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +64,25 @@
     <Compile Include="FmLogin.Designer.cs">
       <DependentUpon>FmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmOut.Designer.cs">
+      <DependentUpon>FmOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmAdd.resx">
+      <DependentUpon>FmAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmHome.resx">
       <DependentUpon>FmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmLogin.resx">
       <DependentUpon>FmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmOut.resx">
+      <DependentUpon>FmOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-truck-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-55.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

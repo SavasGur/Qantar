@@ -20,20 +20,34 @@ namespace Qantar
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlData = new SqlDataAdapter("Select * from Vehicles",sqlCon);
+                SqlDataAdapter sqlData = new SqlDataAdapter("Select * from VehiclesIN",sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlData.Fill(dtbl);
 
-                dgVec.DataSource = dtbl;
+                dgVecIN.DataSource = dtbl;
 
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             FmLogin objFmLogin = new FmLogin();
             this.Close();
             objFmLogin.Show();
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            FmAdd objFmAdd = new FmAdd();
+            this.Close();
+            objFmAdd.Show();
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            FmOut objFmOut = new FmOut();
+            this.Close();
+            objFmOut.Show();
         }
     }
 }

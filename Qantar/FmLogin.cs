@@ -41,7 +41,7 @@ namespace Qantar
             }
             else
             {
-                MessageBox.Show("Kullanıcı Adını veya Şifre Yanlış!");
+                MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!");
             }
 
         }
@@ -50,5 +50,6 @@ namespace Qantar
         {
             this.Close();
         }
+
     }
 }

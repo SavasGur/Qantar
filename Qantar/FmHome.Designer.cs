@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
             this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,9 +78,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle7.Format = "g";
-            dataGridViewCellStyle7.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.Width = 125;

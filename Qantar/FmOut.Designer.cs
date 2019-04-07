@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
@@ -80,6 +80,7 @@
             // 
             // dgVecIN
             // 
+            this.dgVecIN.AllowUserToAddRows = false;
             this.dgVecIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVecIN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.plate,
@@ -98,19 +99,21 @@
             this.plate.DataPropertyName = "plate";
             this.plate.HeaderText = "Plaka";
             this.plate.Name = "plate";
+            this.plate.ReadOnly = true;
             // 
             // driver
             // 
             this.driver.DataPropertyName = "driver";
             this.driver.HeaderText = "Şöför";
             this.driver.Name = "driver";
+            this.driver.ReadOnly = true;
             // 
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle2.Format = "g";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Format = "g";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle3;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.Width = 125;
@@ -120,12 +123,14 @@
             this.userS.DataPropertyName = "userS";
             this.userS.HeaderText = "Kayıt Eden";
             this.userS.Name = "userS";
+            this.userS.ReadOnly = true;
             // 
             // weight
             // 
             this.weight.DataPropertyName = "weightI";
             this.weight.HeaderText = "Ağırlık";
             this.weight.Name = "weight";
+            this.weight.ReadOnly = true;
             // 
             // label2
             // 

@@ -23,5 +23,10 @@ namespace Qantar
             this.Close();
             objFmHome.Show();
         }
+
+        private void btnExc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

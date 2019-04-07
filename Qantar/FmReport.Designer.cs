@@ -45,6 +45,7 @@
             this.btnExc.Text = "Excel Dosyasına Çevir";
             this.btnExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExc.UseVisualStyleBackColor = false;
+            this.btnExc.Click += new System.EventHandler(this.btnExc_Click);
             // 
             // btnHome
             // 

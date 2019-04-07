@@ -27,6 +27,8 @@ namespace Qantar
                 txtUsername.Focus();
             }
         }
+        
+       
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -55,11 +57,13 @@ namespace Qantar
                     this.Hide();
                     objFmHome.Show();
 
+
                 }
                 else
                 {
                     MessageBox.Show("Kullanıcı Adı veya Şifre Yanlış!");
                 }
+
             }
 
         }

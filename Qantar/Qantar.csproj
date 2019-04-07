@@ -137,5 +137,14 @@
   <ItemGroup>
     <None Include="Resources\icons8-microsoft-excel-55 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-weight-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-truck-55 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usb-connector-26.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

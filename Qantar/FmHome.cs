@@ -14,6 +14,8 @@ namespace Qantar
     public partial class FmHome : Form
     {
         string connectionString = @"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True";
+        int count;
+
         public FmHome()
         {
             InitializeComponent();
@@ -35,8 +37,11 @@ namespace Qantar
         string port;
         int reciveddata;
 
+     
+       
         private void FmHome_Load(object sender, EventArgs e)
         {
+
             for (int i = 0; i < System.IO.Ports.SerialPort.GetPortNames().Length; i++)
             {
                 port = System.IO.Ports.SerialPort.GetPortNames()[i];
@@ -89,6 +94,8 @@ namespace Qantar
         {
             DateTime t = DateTime.Now;
             this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
+
+    
         }
 
         private void btnCon_Click(object sender, EventArgs e)
@@ -97,7 +104,7 @@ namespace Qantar
             {
                 serialPort1.Write("1");
                 reciveddata = Convert.ToInt16(serialPort1.ReadLine());
-                labelW.Text = reciveddata.ToString() + "Kg";
+                labelW.Text = reciveddata.ToString() + " Kg";
 
 
 

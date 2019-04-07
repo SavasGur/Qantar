@@ -123,9 +123,39 @@ namespace Qantar.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_truck_55__3_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-truck-55 (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_undo_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8-undo-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usb_connector_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usb-connector-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_weight_26 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-weight-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

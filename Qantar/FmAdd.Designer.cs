@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnOut = new System.Windows.Forms.Button();
             this.txtPlate = new System.Windows.Forms.TextBox();
             this.txtDriver = new System.Windows.Forms.TextBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -38,36 +36,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
             this.labeldt = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnCon = new System.Windows.Forms.Button();
             this.labelW = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.comboBoxPorts = new System.Windows.Forms.ComboBox();
+            this.btnCon = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
-            this.btnReport.Location = new System.Drawing.Point(12, 323);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(100, 75);
-            this.btnReport.TabIndex = 9;
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnOut
-            // 
-            this.btnOut.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnOut.Image = global::Qantar.Properties.Resources.icons8_truck_55__2_;
-            this.btnOut.Location = new System.Drawing.Point(12, 242);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(100, 75);
-            this.btnOut.TabIndex = 8;
-            this.btnOut.UseVisualStyleBackColor = false;
-            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // txtPlate
             // 
@@ -135,17 +115,6 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.LightBlue;
-            this.btnHome.Image = global::Qantar.Properties.Resources.icons8_home_55;
-            this.btnHome.Location = new System.Drawing.Point(1150, 586);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(100, 75);
-            this.btnHome.TabIndex = 18;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // labeldt
             // 
             this.labeldt.AutoSize = true;
@@ -160,24 +129,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnCon
-            // 
-            this.btnCon.Location = new System.Drawing.Point(702, 38);
-            this.btnCon.Name = "btnCon";
-            this.btnCon.Size = new System.Drawing.Size(75, 23);
-            this.btnCon.TabIndex = 20;
-            this.btnCon.Text = "Bağlan";
-            this.btnCon.UseVisualStyleBackColor = true;
-            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
-            // 
             // labelW
             // 
             this.labelW.AutoSize = true;
-            this.labelW.Location = new System.Drawing.Point(573, 41);
+            this.labelW.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelW.Location = new System.Drawing.Point(570, 38);
             this.labelW.Name = "labelW";
-            this.labelW.Size = new System.Drawing.Size(64, 17);
+            this.labelW.Size = new System.Drawing.Size(83, 20);
             this.labelW.TabIndex = 21;
-            this.labelW.Text = "0000000";
+            this.labelW.Text = "- - - - Kg";
             // 
             // comboBoxPorts
             // 
@@ -187,12 +147,67 @@
             this.comboBoxPorts.Size = new System.Drawing.Size(121, 24);
             this.comboBoxPorts.TabIndex = 22;
             // 
+            // btnCon
+            // 
+            this.btnCon.BackColor = System.Drawing.Color.LemonChiffon;
+            this.btnCon.Image = global::Qantar.Properties.Resources.icons8_weight_26;
+            this.btnCon.Location = new System.Drawing.Point(702, 24);
+            this.btnCon.Name = "btnCon";
+            this.btnCon.Size = new System.Drawing.Size(50, 50);
+            this.btnCon.TabIndex = 20;
+            this.btnCon.UseVisualStyleBackColor = false;
+            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.LightBlue;
+            this.btnHome.Image = global::Qantar.Properties.Resources.icons8_home_55;
+            this.btnHome.Location = new System.Drawing.Point(1150, 586);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(100, 75);
+            this.btnHome.TabIndex = 18;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReport.Image = global::Qantar.Properties.Resources.icons8_ratings_55;
+            this.btnReport.Location = new System.Drawing.Point(12, 323);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(100, 75);
+            this.btnReport.TabIndex = 9;
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnOut
+            // 
+            this.btnOut.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOut.Image = global::Qantar.Properties.Resources.icons8_truck_55__2_;
+            this.btnOut.Location = new System.Drawing.Point(12, 242);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(100, 75);
+            this.btnOut.TabIndex = 8;
+            this.btnOut.UseVisualStyleBackColor = false;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Qantar.Properties.Resources.icons8_usb_connector_26;
+            this.pictureBox2.Location = new System.Drawing.Point(328, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
             // FmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBoxPorts);
             this.Controls.Add(this.labelW);
             this.Controls.Add(this.btnCon);
@@ -211,6 +226,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Giriş";
             this.Load += new System.EventHandler(this.FmAdd_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +250,6 @@
         private System.Windows.Forms.Label labelW;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ComboBox comboBoxPorts;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

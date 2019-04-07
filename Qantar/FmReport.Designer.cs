@@ -49,7 +49,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Turquoise;
+            this.btnHome.BackColor = System.Drawing.Color.LightBlue;
             this.btnHome.Image = global::Qantar.Properties.Resources.icons8_home_55;
             this.btnHome.Location = new System.Drawing.Point(1150, 586);
             this.btnHome.Name = "btnHome";

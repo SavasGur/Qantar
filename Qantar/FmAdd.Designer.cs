@@ -41,6 +41,10 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.labeldt = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCon = new System.Windows.Forms.Button();
+            this.labelW = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.comboBoxPorts = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnReport
@@ -133,7 +137,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Turquoise;
+            this.btnHome.BackColor = System.Drawing.Color.LightBlue;
             this.btnHome.Image = global::Qantar.Properties.Resources.icons8_home_55;
             this.btnHome.Location = new System.Drawing.Point(1150, 586);
             this.btnHome.Name = "btnHome";
@@ -156,12 +160,42 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnCon
+            // 
+            this.btnCon.Location = new System.Drawing.Point(702, 38);
+            this.btnCon.Name = "btnCon";
+            this.btnCon.Size = new System.Drawing.Size(75, 23);
+            this.btnCon.TabIndex = 20;
+            this.btnCon.Text = "Bağlan";
+            this.btnCon.UseVisualStyleBackColor = true;
+            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
+            // 
+            // labelW
+            // 
+            this.labelW.AutoSize = true;
+            this.labelW.Location = new System.Drawing.Point(573, 41);
+            this.labelW.Name = "labelW";
+            this.labelW.Size = new System.Drawing.Size(64, 17);
+            this.labelW.TabIndex = 21;
+            this.labelW.Text = "0000000";
+            // 
+            // comboBoxPorts
+            // 
+            this.comboBoxPorts.FormattingEnabled = true;
+            this.comboBoxPorts.Location = new System.Drawing.Point(365, 38);
+            this.comboBoxPorts.Name = "comboBoxPorts";
+            this.comboBoxPorts.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPorts.TabIndex = 22;
+            // 
             // FmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.comboBoxPorts);
+            this.Controls.Add(this.labelW);
+            this.Controls.Add(this.btnCon);
             this.Controls.Add(this.labeldt);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSave);
@@ -176,6 +210,7 @@
             this.Name = "FmAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Giriş";
+            this.Load += new System.EventHandler(this.FmAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +230,9 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label labeldt;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnCon;
+        private System.Windows.Forms.Label labelW;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.ComboBox comboBoxPorts;
     }
 }

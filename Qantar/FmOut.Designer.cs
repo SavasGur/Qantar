@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
@@ -53,6 +53,10 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.labeldt = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.comboBoxPorts = new System.Windows.Forms.ComboBox();
+            this.labelW = new System.Windows.Forms.Label();
+            this.btnCon = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +115,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle3.Format = "g";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.Width = 125;
@@ -246,7 +250,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Turquoise;
+            this.btnHome.BackColor = System.Drawing.Color.LightBlue;
             this.btnHome.Image = global::Qantar.Properties.Resources.icons8_home_55;
             this.btnHome.Location = new System.Drawing.Point(1150, 586);
             this.btnHome.Name = "btnHome";
@@ -269,12 +273,42 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // comboBoxPorts
+            // 
+            this.comboBoxPorts.FormattingEnabled = true;
+            this.comboBoxPorts.Location = new System.Drawing.Point(365, 38);
+            this.comboBoxPorts.Name = "comboBoxPorts";
+            this.comboBoxPorts.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPorts.TabIndex = 25;
+            // 
+            // labelW
+            // 
+            this.labelW.AutoSize = true;
+            this.labelW.Location = new System.Drawing.Point(573, 41);
+            this.labelW.Name = "labelW";
+            this.labelW.Size = new System.Drawing.Size(64, 17);
+            this.labelW.TabIndex = 24;
+            this.labelW.Text = "0000000";
+            // 
+            // btnCon
+            // 
+            this.btnCon.Location = new System.Drawing.Point(702, 38);
+            this.btnCon.Name = "btnCon";
+            this.btnCon.Size = new System.Drawing.Size(75, 23);
+            this.btnCon.TabIndex = 23;
+            this.btnCon.Text = "Bağlan";
+            this.btnCon.UseVisualStyleBackColor = true;
+            this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
+            // 
             // FmOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.comboBoxPorts);
+            this.Controls.Add(this.labelW);
+            this.Controls.Add(this.btnCon);
             this.Controls.Add(this.labeldt);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSave);
@@ -295,6 +329,7 @@
             this.Name = "FmOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Çıkış";
+            this.Load += new System.EventHandler(this.FmOut_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,5 +361,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.Label labeldt;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox comboBoxPorts;
+        private System.Windows.Forms.Label labelW;
+        private System.Windows.Forms.Button btnCon;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }

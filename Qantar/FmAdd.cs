@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,32 @@ namespace Qantar
             InitializeComponent();
 
             timer1.Start();
+
+        }
+
+        string port;
+        int reciveddata;
+       
+        private void FmAdd_Load(object sender, EventArgs e)
+        {
+        
+            for (int i = 0; i < System.IO.Ports.SerialPort.GetPortNames().Length;i++)
+            {
+                port = System.IO.Ports.SerialPort.GetPortNames()[i];
+                comboBoxPorts.Items.Add(System.IO.Ports.SerialPort.GetPortNames()[i]);
+            }
+            try
+            {
+                serialPort1.PortName = port;
+                if (!serialPort1.IsOpen)
+                    serialPort1.Open();
+            }
+            catch (Exception)
+            {
+            }
+
+            SqlConnection con = new SqlConnection(@"Data Source=IDEAPAD-SAV;Initial Catalog=QantarDB;Integrated Security=True");
+            con.Open();
 
         }
 
@@ -76,6 +103,23 @@ namespace Qantar
         {
             DateTime t = DateTime.Now;
             this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
+        }
+
+        private void btnCon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                serialPort1.Write("1");
+                reciveddata = Convert.ToInt16(serialPort1.ReadLine());
+                labelW.Text = reciveddata.ToString() + "Kg";
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

@@ -47,6 +47,7 @@
             this.tarihsearchButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tarihPicker2 = new System.Windows.Forms.DateTimePicker();
+            this.timerLabel = new System.Windows.Forms.Label();
             this.Filtre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportGridview)).BeginInit();
             this.tarihFiltreBox.SuspendLayout();
@@ -58,7 +59,7 @@
             this.btnExc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExc.Image = global::Qantar.Properties.Resources.icons8_microsoft_excel_55__1_;
             this.btnExc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExc.Location = new System.Drawing.Point(950, 39);
+            this.btnExc.Location = new System.Drawing.Point(950, 48);
             this.btnExc.Name = "btnExc";
             this.btnExc.Size = new System.Drawing.Size(300, 75);
             this.btnExc.TabIndex = 22;
@@ -262,12 +263,22 @@
             this.tarihPicker2.Size = new System.Drawing.Size(250, 22);
             this.tarihPicker2.TabIndex = 30;
             // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Location = new System.Drawing.Point(1018, 9);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(46, 17);
+            this.timerLabel.TabIndex = 32;
+            this.timerLabel.Text = "label1";
+            // 
             // FmReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.tarihFiltreBox);
             this.Controls.Add(this.reportGridview);
             this.Controls.Add(this.Filtre);
@@ -283,6 +294,7 @@
             this.tarihFiltreBox.ResumeLayout(false);
             this.tarihFiltreBox.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -307,5 +319,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker tarihPicker2;
         private System.Windows.Forms.Button tarihgeriButton;
+        private System.Windows.Forms.Label timerLabel;
     }
 }

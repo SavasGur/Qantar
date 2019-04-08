@@ -28,7 +28,7 @@ namespace Qantar
                 return output;
             }
         }
-
+       
         public List<KantarOut> PlakaOFilter(string search)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.Val("QantarDB")))
@@ -106,6 +106,15 @@ namespace Qantar
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.Val("QantarDB")))
             {
                 var output = connection.Query<KantarOut>($"select * from VehiclesOUT where dateO between '{ search }' and '{ search1 }'").ToList();
+
+                return output;
+            }
+        }
+        public List<KantarIn> GetUser(string search)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.Val("QantarDB")))
+            {
+                var output = connection.Query<KantarIn>($"select * from LoginCred where username = '{ search }'").ToList();
 
                 return output;
             }

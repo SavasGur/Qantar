@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
             this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnexchm = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,9 +93,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle1.Format = "g";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "g";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle7;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.ReadOnly = true;
@@ -181,12 +181,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1060, 216);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1080, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(37, 39);
             this.label3.TabIndex = 31;
-            this.label3.Text = "label3";
+            this.label3.Text = "0";
             // 
             // pictureBox2
             // 
@@ -264,15 +264,15 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnexchm
+            // button1
             // 
-            this.btnexchm.Location = new System.Drawing.Point(1009, 622);
-            this.btnexchm.Name = "btnexchm";
-            this.btnexchm.Size = new System.Drawing.Size(75, 23);
-            this.btnexchm.TabIndex = 33;
-            this.btnexchm.Text = "button1";
-            this.btnexchm.UseVisualStyleBackColor = true;
-            this.btnexchm.Click += new System.EventHandler(this.btnexchm_Click);
+            this.button1.Location = new System.Drawing.Point(29, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FmHome
             // 
@@ -280,7 +280,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.btnexchm);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -332,6 +332,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnexchm;
+        private System.Windows.Forms.Button button1;
     }
 }

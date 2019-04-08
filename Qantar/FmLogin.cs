@@ -27,8 +27,9 @@ namespace Qantar
                 txtUsername.Focus();
             }
         }
+
+        public string VarUsername;
         
-       
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -57,7 +58,8 @@ namespace Qantar
                     this.Hide();
                     objFmHome.Show();
 
-
+                    VarUsername = txtUsername.Text.Trim();
+                    MessageBox.Show( VarUsername + " kullanıcısı giriş yaptı.");
                 }
                 else
                 {
@@ -67,6 +69,8 @@ namespace Qantar
             }
 
         }
+   
+     
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -77,6 +81,11 @@ namespace Qantar
         {
             DateTime t = DateTime.Now;
             this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
+        }
+
+        private void FmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,11 +38,14 @@ namespace Qantar
 
         private void FmReport_Load(object sender, EventArgs e)
         {
+            DataAccess db = new DataAccess();
             plateTextbox.Visible = false;
             driverTextbox.Visible = false;
             girisRadio.Checked = true;
             girisagirlkFilterTextbox.Visible = false;
             tarihFiltreBox.Visible = false;
+            DateTime tmr = DateTime.Now;
+            timerLabel.Text = tmr.ToString();
         }
 
         private void driverFilter_CheckedChanged(object sender, EventArgs e)
@@ -254,5 +257,7 @@ namespace Qantar
             tarihFiltreBox.Visible = false;
             tarihFilter.Checked = false;
         }
+
+        
     }
 }

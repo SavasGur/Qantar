@@ -34,10 +34,11 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labeldt = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -84,24 +85,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Şifre: ";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 150);
-            this.panel1.TabIndex = 7;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.IndianRed;
-            this.btnExit.Image = global::Qantar.Properties.Resources.icons8_shutdown_26;
-            this.btnExit.Location = new System.Drawing.Point(560, 371);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(50, 50);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -116,6 +99,27 @@
             this.labeldt.TabIndex = 20;
             this.labeldt.Text = "MM/dd/yyyy HH:mm:ss";
             // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::Qantar.Properties.Resources.Webp_net_resizeimage__2_;
+            this.picLogo.Location = new System.Drawing.Point(12, 12);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(598, 150);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.IndianRed;
+            this.btnExit.Image = global::Qantar.Properties.Resources.icons8_shutdown_26;
+            this.btnExit.Location = new System.Drawing.Point(560, 371);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FmLogin
             // 
             this.AcceptButton = this.btnLogin;
@@ -123,8 +127,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(622, 433);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.labeldt);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
@@ -135,6 +139,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Oturum Aç";
             this.Load += new System.EventHandler(this.FmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,9 +153,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labeldt;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 

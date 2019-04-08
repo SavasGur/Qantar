@@ -159,5 +159,17 @@
   <ItemGroup>
     <None Include="Resources\icons8-usb-connector-26.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

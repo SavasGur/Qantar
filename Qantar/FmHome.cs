@@ -98,9 +98,7 @@ namespace Qantar
             DateTime t = DateTime.Now;
             this.labeldt.Text = t.ToString("MM/dd/yyyy HH:mm:ss");
 
-            FmLogin objfmLogin = new FmLogin();
-            string hun = objfmLogin.VarUsername;
-            this.labelUsername.Text = hun;
+            
     
         }
 
@@ -121,12 +119,7 @@ namespace Qantar
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FmLogin objfmLogin = new FmLogin();
-            string hun = objfmLogin.VarUsername;
-            MessageBox.Show(hun);
-        }
+        
     }
     
 }

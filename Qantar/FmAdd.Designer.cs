@@ -41,11 +41,11 @@
             this.labelW = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.comboBoxPorts = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCon = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnOut = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +119,7 @@
             // 
             this.labeldt.AutoSize = true;
             this.labeldt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldt.Location = new System.Drawing.Point(12, 9);
+            this.labeldt.Location = new System.Drawing.Point(1066, 9);
             this.labeldt.Name = "labeldt";
             this.labeldt.Size = new System.Drawing.Size(184, 20);
             this.labeldt.TabIndex = 19;
@@ -146,6 +146,16 @@
             this.comboBoxPorts.Name = "comboBoxPorts";
             this.comboBoxPorts.Size = new System.Drawing.Size(121, 24);
             this.comboBoxPorts.TabIndex = 22;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Qantar.Properties.Resources.icons8_usb_connector_26;
+            this.pictureBox2.Location = new System.Drawing.Point(328, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
             // 
             // btnCon
             // 
@@ -190,16 +200,6 @@
             this.btnOut.TabIndex = 8;
             this.btnOut.UseVisualStyleBackColor = false;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Qantar.Properties.Resources.icons8_usb_connector_26;
-            this.pictureBox2.Location = new System.Drawing.Point(328, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
             // 
             // FmAdd
             // 

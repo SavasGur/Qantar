@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tarihPicker2 = new System.Windows.Forms.DateTimePicker();
             this.timerLabel = new System.Windows.Forms.Label();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnIn = new System.Windows.Forms.Button();
             this.Filtre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reportGridview)).BeginInit();
             this.tarihFiltreBox.SuspendLayout();
@@ -59,7 +61,7 @@
             this.btnExc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExc.Image = global::Qantar.Properties.Resources.icons8_microsoft_excel_55__1_;
             this.btnExc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExc.Location = new System.Drawing.Point(950, 48);
+            this.btnExc.Location = new System.Drawing.Point(899, 241);
             this.btnExc.Name = "btnExc";
             this.btnExc.Size = new System.Drawing.Size(300, 75);
             this.btnExc.TabIndex = 22;
@@ -149,7 +151,7 @@
             this.Filtre.Controls.Add(this.driverFilter);
             this.Filtre.Controls.Add(this.plateFilter);
             this.Filtre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Filtre.Location = new System.Drawing.Point(70, 39);
+            this.Filtre.Location = new System.Drawing.Point(121, 39);
             this.Filtre.Name = "Filtre";
             this.Filtre.Size = new System.Drawing.Size(377, 194);
             this.Filtre.TabIndex = 28;
@@ -195,12 +197,13 @@
             // 
             this.reportGridview.AllowUserToAddRows = false;
             this.reportGridview.AllowUserToDeleteRows = false;
+            this.reportGridview.BackgroundColor = System.Drawing.Color.White;
             this.reportGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.reportGridview.Location = new System.Drawing.Point(102, 261);
+            this.reportGridview.Location = new System.Drawing.Point(118, 242);
             this.reportGridview.Name = "reportGridview";
             this.reportGridview.ReadOnly = true;
             this.reportGridview.RowTemplate.Height = 24;
-            this.reportGridview.Size = new System.Drawing.Size(1019, 280);
+            this.reportGridview.Size = new System.Drawing.Size(775, 419);
             this.reportGridview.TabIndex = 29;
             // 
             // tarihPicker
@@ -218,7 +221,7 @@
             this.tarihFiltreBox.Controls.Add(this.label2);
             this.tarihFiltreBox.Controls.Add(this.tarihPicker2);
             this.tarihFiltreBox.Controls.Add(this.tarihPicker);
-            this.tarihFiltreBox.Location = new System.Drawing.Point(67, 39);
+            this.tarihFiltreBox.Location = new System.Drawing.Point(118, 39);
             this.tarihFiltreBox.Name = "tarihFiltreBox";
             this.tarihFiltreBox.Size = new System.Drawing.Size(380, 197);
             this.tarihFiltreBox.TabIndex = 31;
@@ -266,11 +269,34 @@
             // timerLabel
             // 
             this.timerLabel.AutoSize = true;
-            this.timerLabel.Location = new System.Drawing.Point(1018, 9);
+            this.timerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.Location = new System.Drawing.Point(1066, 9);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(46, 17);
+            this.timerLabel.Size = new System.Drawing.Size(184, 20);
             this.timerLabel.TabIndex = 32;
-            this.timerLabel.Text = "label1";
+            this.timerLabel.Text = "MM/dd/yyyy HH:mm:ss";
+            // 
+            // btnOut
+            // 
+            this.btnOut.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOut.Image = global::Qantar.Properties.Resources.icons8_truck_55__2_;
+            this.btnOut.Location = new System.Drawing.Point(12, 242);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(100, 75);
+            this.btnOut.TabIndex = 34;
+            this.btnOut.UseVisualStyleBackColor = false;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnIn.Image = global::Qantar.Properties.Resources.icons8_truck_55__1_;
+            this.btnIn.Location = new System.Drawing.Point(12, 161);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(100, 75);
+            this.btnIn.TabIndex = 33;
+            this.btnIn.UseVisualStyleBackColor = false;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // FmReport
             // 
@@ -278,6 +304,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnOut);
+            this.Controls.Add(this.btnIn);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.tarihFiltreBox);
             this.Controls.Add(this.reportGridview);
@@ -320,5 +348,7 @@
         private System.Windows.Forms.DateTimePicker tarihPicker2;
         private System.Windows.Forms.Button tarihgeriButton;
         private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Button btnOut;
+        private System.Windows.Forms.Button btnIn;
     }
 }

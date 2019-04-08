@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
             this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,6 @@
             this.comboBoxPorts = new System.Windows.Forms.ComboBox();
             this.labelW = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.labelUsername = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,7 +51,6 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +60,7 @@
             // 
             this.dgVecIN.AllowUserToAddRows = false;
             this.dgVecIN.AllowUserToDeleteRows = false;
+            this.dgVecIN.BackgroundColor = System.Drawing.Color.White;
             this.dgVecIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVecIN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.plate,
@@ -93,9 +92,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle7.Format = "g";
-            dataGridViewCellStyle7.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Format = "g";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.ReadOnly = true;
@@ -141,7 +140,7 @@
             // 
             this.labeldt.AutoSize = true;
             this.labeldt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldt.Location = new System.Drawing.Point(12, 9);
+            this.labeldt.Location = new System.Drawing.Point(1066, 9);
             this.labeldt.Name = "labeldt";
             this.labeldt.Size = new System.Drawing.Size(184, 20);
             this.labeldt.TabIndex = 7;
@@ -169,22 +168,13 @@
             this.labelW.TabIndex = 27;
             this.labelW.Text = "- - - - Kg";
             // 
-            // labelUsername
-            // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Location = new System.Drawing.Point(16, 33);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(79, 17);
-            this.labelUsername.TabIndex = 29;
-            this.labelUsername.Text = "User Name";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(1080, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 39);
+            this.label3.Size = new System.Drawing.Size(36, 38);
             this.label3.TabIndex = 31;
             this.label3.Text = "0";
             // 
@@ -264,27 +254,15 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(29, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.comboBoxPorts);
             this.Controls.Add(this.labelW);
             this.Controls.Add(this.btnCon);
@@ -328,10 +306,8 @@
         private System.Windows.Forms.Label labelW;
         private System.Windows.Forms.Button btnCon;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
     }
 }

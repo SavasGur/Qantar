@@ -258,6 +258,18 @@ namespace Qantar
             tarihFilter.Checked = false;
         }
 
-        
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            FmAdd objFmAdd = new FmAdd();
+            this.Close();
+            objFmAdd.Show();
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            FmOut objFmOut = new FmOut();
+            this.Close();
+            objFmOut.Show();
+        }
     }
 }

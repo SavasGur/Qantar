@@ -59,7 +59,7 @@ namespace Qantar
                     objFmHome.Show();
 
                     VarUsername = txtUsername.Text.Trim();
-                    MessageBox.Show( VarUsername + " kullanıcısı giriş yaptı.");
+                    MessageBox.Show( VarUsername + " kullanıcısı olarak giriş yaptınız.");
                 }
                 else
                 {

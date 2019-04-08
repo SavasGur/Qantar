@@ -138,7 +138,6 @@
             this.Name = "FmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Oturum Aç";
-            this.Load += new System.EventHandler(this.FmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgVecIN = new System.Windows.Forms.DataGridView();
             this.plate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.driver = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,7 @@
             this.labelW = new System.Windows.Forms.Label();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCon = new System.Windows.Forms.Button();
@@ -92,9 +93,9 @@
             // dateI
             // 
             this.dateI.DataPropertyName = "dateI";
-            dataGridViewCellStyle2.Format = "g";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dateI.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "g";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
             this.dateI.ReadOnly = true;
@@ -178,6 +179,17 @@
             this.label3.TabIndex = 31;
             this.label3.Text = "0";
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.Honeydew;
+            this.btnAddUser.Image = global::Qantar.Properties.Resources.icons8_contacts_26;
+            this.btnAddUser.Location = new System.Drawing.Point(12, 611);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(50, 50);
+            this.btnAddUser.TabIndex = 33;
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Qantar.Properties.Resources.icons8_usb_connector_26;
@@ -260,6 +272,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -309,5 +322,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnAddUser;
     }
 }

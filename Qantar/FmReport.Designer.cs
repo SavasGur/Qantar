@@ -62,7 +62,7 @@
             this.btnExc.Name = "btnExc";
             this.btnExc.Size = new System.Drawing.Size(300, 75);
             this.btnExc.TabIndex = 22;
-            this.btnExc.Text = "AD";
+            this.btnExc.Text = "Excel Dosyasına Çevir";
             this.btnExc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExc.UseVisualStyleBackColor = false;
             this.btnExc.Click += new System.EventHandler(this.btnExc_Click);

@@ -65,6 +65,7 @@
             // dgVecIN
             // 
             this.dgVecIN.AllowUserToAddRows = false;
+            this.dgVecIN.AllowUserToDeleteRows = false;
             this.dgVecIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVecIN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.plate,
@@ -74,6 +75,7 @@
             this.weight});
             this.dgVecIN.Location = new System.Drawing.Point(118, 161);
             this.dgVecIN.Name = "dgVecIN";
+            this.dgVecIN.ReadOnly = true;
             this.dgVecIN.RowTemplate.Height = 24;
             this.dgVecIN.Size = new System.Drawing.Size(775, 500);
             this.dgVecIN.TabIndex = 7;
@@ -100,6 +102,7 @@
             this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
+            this.dateI.ReadOnly = true;
             this.dateI.Width = 125;
             // 
             // userS

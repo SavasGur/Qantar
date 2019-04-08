@@ -61,6 +61,7 @@
             // dgVecIN
             // 
             this.dgVecIN.AllowUserToAddRows = false;
+            this.dgVecIN.AllowUserToDeleteRows = false;
             this.dgVecIN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVecIN.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.plate,
@@ -70,6 +71,7 @@
             this.weight});
             this.dgVecIN.Location = new System.Drawing.Point(118, 161);
             this.dgVecIN.Name = "dgVecIN";
+            this.dgVecIN.ReadOnly = true;
             this.dgVecIN.RowTemplate.Height = 24;
             this.dgVecIN.Size = new System.Drawing.Size(775, 500);
             this.dgVecIN.TabIndex = 5;
@@ -79,12 +81,14 @@
             this.plate.DataPropertyName = "plate";
             this.plate.HeaderText = "Plaka";
             this.plate.Name = "plate";
+            this.plate.ReadOnly = true;
             // 
             // driver
             // 
             this.driver.DataPropertyName = "driver";
             this.driver.HeaderText = "Şöför";
             this.driver.Name = "driver";
+            this.driver.ReadOnly = true;
             // 
             // dateI
             // 
@@ -94,6 +98,7 @@
             this.dateI.DefaultCellStyle = dataGridViewCellStyle1;
             this.dateI.HeaderText = "Giriş Tarihi";
             this.dateI.Name = "dateI";
+            this.dateI.ReadOnly = true;
             this.dateI.Width = 125;
             // 
             // userS
@@ -101,12 +106,14 @@
             this.userS.DataPropertyName = "userS";
             this.userS.HeaderText = "Kayıt Eden";
             this.userS.Name = "userS";
+            this.userS.ReadOnly = true;
             // 
             // weight
             // 
             this.weight.DataPropertyName = "weightI";
             this.weight.HeaderText = "Ağırlık";
             this.weight.Name = "weight";
+            this.weight.ReadOnly = true;
             // 
             // label2
             // 

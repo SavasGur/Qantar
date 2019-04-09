@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmAdd));
             this.txtPlate = new System.Windows.Forms.TextBox();
             this.txtDriver = new System.Windows.Forms.TextBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.txtPlate);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnOut);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Giriş";

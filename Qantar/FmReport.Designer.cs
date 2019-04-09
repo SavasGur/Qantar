@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmReport));
             this.btnExc = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.girisRadio = new System.Windows.Forms.RadioButton();
@@ -312,6 +313,7 @@
             this.Controls.Add(this.Filtre);
             this.Controls.Add(this.btnExc);
             this.Controls.Add(this.btnHome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qantar - Rapor";

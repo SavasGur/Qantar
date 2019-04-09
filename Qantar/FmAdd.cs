@@ -111,15 +111,17 @@ namespace Qantar
             {
                 serialPort1.Write("1");
                 reciveddata = Convert.ToInt16(serialPort1.ReadLine());
-                labelW.Text = reciveddata.ToString() + " Kg";
+                labelW.Text = reciveddata.ToString()+ " Kg";
 
+                
 
-
-
+                
             }
             catch (Exception ex)
             {
             }
+
+            txtWeight.Text = reciveddata.ToString();
         }
     }
 }

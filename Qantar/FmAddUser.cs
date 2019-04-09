@@ -53,9 +53,9 @@ namespace Qantar
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            FmHome objFmHome = new FmHome();
+            //FmHome objFmHome = new FmHome();
             this.Close();
-            objFmHome.Show();
+            //objFmHome.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

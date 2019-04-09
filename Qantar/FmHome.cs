@@ -122,7 +122,7 @@ namespace Qantar
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             FmAddUser objFmAddUser = new FmAddUser();
-            this.Close();
+            
             objFmAddUser.Show();
         }
     }

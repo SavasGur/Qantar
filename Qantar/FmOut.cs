@@ -135,6 +135,8 @@ namespace Qantar
             catch (Exception ex)
             {
             }
+
+            txtWo.Text = reciveddata.ToString();
         }
 
     }

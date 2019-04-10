@@ -53,6 +53,7 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnFmDel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgVecIN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -267,12 +268,26 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnFmDel
+            // 
+            this.btnFmDel.BackColor = System.Drawing.Color.Crimson;
+            this.btnFmDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFmDel.ForeColor = System.Drawing.Color.White;
+            this.btnFmDel.Location = new System.Drawing.Point(903, 628);
+            this.btnFmDel.Name = "btnFmDel";
+            this.btnFmDel.Size = new System.Drawing.Size(125, 33);
+            this.btnFmDel.TabIndex = 34;
+            this.btnFmDel.Text = "Araç Sil";
+            this.btnFmDel.UseVisualStyleBackColor = false;
+            this.btnFmDel.Click += new System.EventHandler(this.btnFmDel_Click);
+            // 
             // FmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnFmDel);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
@@ -310,11 +325,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgVecIN;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn plate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn driver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.Label labeldt;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox comboBoxPorts;
@@ -325,5 +335,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn plate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn driver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.Button btnFmDel;
     }
 }

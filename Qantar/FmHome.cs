@@ -125,6 +125,14 @@ namespace Qantar
             
             objFmAddUser.Show();
         }
+
+        private void btnFmDel_Click(object sender, EventArgs e)
+        {
+            FmDel objFmDel = new FmDel();
+            this.Close();
+            objFmDel.Show();
+
+        }
     }
     
 }

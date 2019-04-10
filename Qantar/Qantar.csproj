@@ -67,6 +67,12 @@
     <Compile Include="FmAddUser.Designer.cs">
       <DependentUpon>FmAddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmDel.Designer.cs">
+      <DependentUpon>FmDel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmAddUser.resx">
       <DependentUpon>FmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmDel.resx">
+      <DependentUpon>FmDel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmHome.resx">
       <DependentUpon>FmHome.cs</DependentUpon>
